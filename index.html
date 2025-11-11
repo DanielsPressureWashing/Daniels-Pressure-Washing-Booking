@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Daniel's Pressure Washing</title>
+  <meta name="description" content="Professional pressure washing — driveways, fences, patios, siding." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="icon" href="/logo.png" />
+  <meta property="og:title" content="Daniel’s Pressure Washing" />
+  <meta property="og:description" content="Professional pressure washing — driveways, fences, patios, siding." />
+  <meta property="og:image" content="/logo.png" />
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav__inner">
+      <div class="brand">
+        <img class="brand__logo" src="/logo.png" alt="Daniel’s Pressure Washing logo" />
+        <span class="brand__name">Daniel’s Pressure Washing</span>
+      </div>
+      <nav class="nav__links">
+        <a href="#services">Services</a>
+        <a href="#booking">Book</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero__content">
+        <h1>Make it look brand new.</h1>
+        <p>Driveways, sidewalks, fences, patios and siding — professionally cleaned and sealed.</p>
+        <a class="btn btn--primary" href="#booking">Book a visit</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="section">
+    <div class="container">
+      <h2>Popular Services</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Driveway Cleaning</h3>
+          <p>Deep clean to remove oil, tire marks and mildew.</p>
+        </div>
+        <div class="card">
+          <h3>Fence &amp; Deck Wash</h3>
+          <p>Gentle wash to lift grime while protecting wood.</p>
+        </div>
+        <div class="card">
+          <h3>House Siding</h3>
+          <p>Soft wash to safely clean vinyl, brick and stucco.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="booking" class="section section--alt">
+    <div class="container">
+      <h2>Book Your Cleaning</h2>
+      <form id="bookingForm" class="form" autocomplete="on" novalidate>
+        <div class="grid">
+          <label class="field">
+            <span>Name *</span>
+            <input type="text" name="name" required placeholder="Full name" />
+          </label>
+          <label class="field">
+            <span>Email *</span>
+            <input type="email" name="email" required placeholder="you@email.com" />
+          </label>
+          <label class="field">
+            <span>Phone *</span>
+            <input type="tel" name="phone" required placeholder="(555) 555‑5555" />
+          </label>
+          <label class="field field--full">
+            <span>Service Address *</span>
+            <input type="text" name="address" required placeholder="Street, City, ZIP" />
+          </label>
+          <label class="field">
+            <span>Service Type *</span>
+            <select name="serviceType" required>
+              <option value="">Choose…</option>
+              <option>Driveway Cleaning</option>
+              <option>Fence & Deck Wash</option>
+              <option>House Siding (Soft Wash)</option>
+              <option>Patio / Sidewalk</option>
+              <option></option>
+              <option>Other</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>Approx. Sq Ft (optional)</span>
+            <input type="number" name="sqft" min="0" step="1" placeholder="e.g. 800" />
+          </label>
+          <label class="field">
+            <span>Preferred Date *</span>
+            <input type="date" name="preferredDate" required />
+          </label>
+          <label class="field">
+            <span>Preferred Time *</span>
+            <input type="time" name="preferredTime" required />
+          </label>
+          <label class="field field--full">
+            <span>Notes</span>
+            <textarea name="notes" rows="4" placeholder="Gate code, stains to focus on, etc."></textarea>
+          </label>
+
+          <!-- Honeypot (hidden from humans) -->
+          <label class="field honeypot">
+            <span>Website</span>
+            <input type="text" name="website" autocomplete="off" />
+          </label>
+        </div>
+
+        <div class="form__actions">
+          <button type="submit" class="btn btn--primary">Request Booking</button>
+          <span id="formStatus" class="form__status" role="status" aria-live="polite"></span>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:bookings@example.com">bookings@example.com</a></p>
+      <p>Serving Federal Way and surrounding areas.</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span id="year"></span> Daniel’s Pressure Washing</p>
+      <a href="#booking" class="btn btn--link">Book now</a>
+    </div>
+  </footer>
+
+  <script src="/app.js" defer></script>
+</body>
+</html>
